@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        background-image: url("weather.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+    }
+    .weather{
+        width: 80%;
+        max-width: 400px;
+        height:60%;
+        color: rgba(255, 255, 255, 0.867);
+        text-shadow: 1.5px 1.5px 6px black;
+        backdrop-filter: blur;
+        /* border: 3px solid rgba(255, 255, 255, 0); */
+        z-index: 9;
+        box-shadow: 10px 10px 25px #7b7b7b61,
+                   inset -20px -20px 45px #c6c6c686;
+        border-radius: 1.5rem;
+        background-color: rgba(240, 248, 255, 0.329);
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        transition: ease;
+    }
+    /* .weather:hover{
+        transform: scale(1.02);
+    } */
+    .box{
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bolder;
+    }
+    .icon{
+        font-size: 6rem;
+    }
+    .search{
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        justify-items: center;
+    }
+    .city{
+        border: none;
+        outline: none;
+        color: rgba(0, 0, 0, 0.724);
+        background-color: rgba(240, 248, 255, 0.572);
+        backdrop-filter: blur;
+        padding: 1rem;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        font-size: 1rem;
+    }
+    .btn{
+        border: none;
+        background-color: rgba(240, 248, 255, 0.572);
+        backdrop-filter: blur;
+        padding: 1rem;
+        border-bottom-right-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+    .btn:hover{
+        background-color: rgba(228, 234, 244, 0.77);
+    }
+    .error {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly; 
+    align-items: center; 
+    height: 100%;
+    /* display: none; */
+}
+.ermsg{
+    display: none;
+}
+
+</style>
+<body>
+    <div class="weather">
+        <div class="search">
+            <input type="text" value="Kolkata" class="city" name="cityname">
+            <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="error">
+        <div class="box"></div>
+        <div class="temp"></div>
+        <div class="humidity"></div>
+        <div class="icon"></div>
+        <div class="description"></div>
+      </div>
+      <div class="ermsg">No Such City</div>
+    </div>
+    <!-- 🌦️🌥️☀️🌤️⛈️ -->
+</body>
+<script src="weather.js"></script>
+</html>
