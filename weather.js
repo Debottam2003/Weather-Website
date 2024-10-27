@@ -18,6 +18,13 @@ let icon = document.querySelector(".icon");
     // }
 //});
 let apikey = "3f75320d62ed708ca69fb9f3ee2e6997";
+
+cityinput.addEventListener('keypress',(event)=>{
+if(event.key === "Enter"){
+apiwork();
+}
+});
+
 btn.addEventListener('click',apiwork);
 async function apiwork(){
          let city = cityinput.value;
